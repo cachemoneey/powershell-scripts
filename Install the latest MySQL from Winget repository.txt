@@ -1,0 +1,12 @@
+### Install the latest MySQL from Winget repository
+### Author: John Bryntze
+### Date: 2nd February 2024
+
+## set variables
+$JBNWingetAppID = "Oracle.MySQL"
+
+## Help SYSTEM find winget.exe folder
+Set-Location -Path ("$env:ProgramW6432\WindowsApps\Microsoft.DesktopAppInstaller_*_x64__8wekyb3d8bbwe")
+
+## Install MySQL software with winget.exe
+.\winget.exe install -e --id $JBNWingetAppID --silent --accept-package-agreements --accept-source-agreements --force
